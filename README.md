@@ -24,7 +24,7 @@ You will then need to build and install the gem:
 Once the gem is installed you can simply type:
 
     $ credit_card_processor
-This will evoke an executable file which will start a command line session (there are instructions) where the user can enter commands:
+This will invoke an executable file which will start a command line session (there are instructions) where the user can enter commands:
     
     $ Add Tom 4111111111111111 $1000
     $ Charge Tom $500
@@ -40,7 +40,7 @@ And the program ends and they are given a printout of the transactions.
 
 Once the gem is installed you can also pass a CSV file to the command line like so:
 
-    $ process_credit_card_file ../test.csv
+    $ process_credit_card_file test.csv
     
 Which will print out a summary of the transactions
 
