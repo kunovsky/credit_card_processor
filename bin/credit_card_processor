@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'credit_card_processor'
+
+credit_card = CreditCardProcessor::CreditCard
+
+CreditCardProcessor::UserInterface.new(credit_card).run

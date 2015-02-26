@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'credit_card_processor'
+
+credit_card = CreditCardProcessor::CreditCard
+
+CreditCardProcessor::Parser.new({path: ARGV[0], credit_card: credit_card }).parse
+

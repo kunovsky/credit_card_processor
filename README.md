@@ -1,31 +1,51 @@
 # CreditCardProcessor
 
-TODO: Write a gem description
+I made a command line gem so that my solution could easily be shared and accessed. My solution contains a modular architecture in which I used the SRP to break all components down into their smallest possible pieces. I then require those pieces when necessary. I tried not to be too fancy but write clean, simple, and reusable code that would serve as the foundation for later additions to the code base. In order to ensure quality my solution includes both unit tests and integration tests using Rspec. In terms of language, Ruby is the one I've been using most for the last couple of years so I decided to go with it on account of familiarity. 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+>Note that RubyGems and Bundler are required to use this gem 
 
-```ruby
-gem 'credit_card_processor'
-```
+Go to the root directory of the gem:
 
+    $ cd credit_card_processor
+    
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+You will then need to build and install the gem:
 
-    $ gem install credit_card_processor
+    $ gem build credit_card_processor.gemspec
+    $ gem install ./credit_card_processor-0.0.1.gem
 
-## Usage
+## Usage -- Manually enter data
 
-TODO: Write usage instructions here
+Once the gem is installed you can simply type:
 
-## Contributing
+    $ credit_card_processor
+This will evoke an executable file which will start a command line session (there are instructions) where the user can enter commands:
+    
+    $ Add Tom 4111111111111111 $1000
+    $ Charge Tom $500
+    $ Credit Tom $25
 
-1. Fork it ( https://github.com/[my-github-username]/credit_card_processor/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+When the user is done they type:
+    
+    $ done
+    
+And the program ends and they are given a printout of the transactions.
+
+## Usage -- Pass a file to the command line
+
+Once the gem is installed you can also pass a CSV file to the command line like so:
+
+    $ process_credit_card_file ../test.csv
+    
+Which will print out a summary of the transactions
+
+## Tests
+
+To run the tests:
+
+    $ rake spec
