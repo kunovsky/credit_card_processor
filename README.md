@@ -1,7 +1,5 @@
 # CreditCardProcessor
 
-I made a command line gem so that my solution could easily be shared and accessed. My solution contains a modular architecture in which I used the SRP to break all components down into their smallest possible pieces. I then require those pieces when necessary. I tried not to be too fancy but write clean, simple, and reusable code that would serve as the foundation for later additions to the code base. In order to ensure quality my solution includes both unit tests and integration tests using Rspec. In terms of language, Ruby is the one I've been using most for the last couple of years so I decided to go with it on account of familiarity. 
-
 ## Installation
 
 >Note that RubyGems and Bundler are required to use this gem 
